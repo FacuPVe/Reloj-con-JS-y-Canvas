@@ -1,0 +1,146 @@
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+h1 {
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    margin-bottom: 2rem;
+    text-align: center;
+    color: #1e3c72;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+#app {
+    width: 100%;
+    max-width: 1000px;
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+#contenedor-principal {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+    margin: 2rem auto;
+    max-width: 800px;
+}
+
+#reloj {
+    flex: 0 0 auto;
+    margin: 0;
+    max-width: 300px;
+    margin-left: 60px;
+}
+
+#relojDigital {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    display: block;
+    margin: 0 auto 1.5rem;
+}
+
+#reloj p {
+    font-size: clamp(1.2rem, 3vw, 1.8rem);
+    margin: 0.5rem 0;
+    text-align: center;
+    color: #1e3c72;
+    font-weight: 500;
+}
+
+#opciones {
+    flex: 1;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 450px;
+    margin-top: 10px;
+}
+
+#opciones > div {
+    width: 100%;
+}
+
+#opciones label {
+    font-size: clamp(0.875rem, 2vw, 1.4rem);
+    margin-bottom: 0.5rem;
+    color: #1e3c72;
+    font-weight: 500;
+}
+
+#opciones select {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: clamp(0.875rem, 2vw, 1rem);
+    border: 2px solid #1e3c72;
+    border-radius: 8px;
+    background-color: white;
+    color: #333;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+#opciones select:hover {
+    border-color: #2a5298;
+    box-shadow: 0 2px 8px rgba(42, 82, 152, 0.2);
+}
+
+#opciones select:focus {
+    outline: none;
+    border-color: #2a5298;
+    box-shadow: 0 2px 12px rgba(42, 82, 152, 0.3);
+}
+
+#mapa {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    aspect-ratio: 4/3;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    margin: 20px auto;
+    display: block;
+    background-color: #f5f7fa;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 15px;
+    }
+
+    #app {
+        padding: 1.5rem;
+    }
+
+    #contenedor-principal {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #reloj {
+        margin-bottom: 1rem;
+        margin-left: 0px;
+    }
+
+    #opciones {
+        width: 100%;
+    }
+
+    #mapa {
+        margin: 1.5rem auto;
+        border-width: 2px;
+    }
+}
